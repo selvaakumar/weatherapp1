@@ -28,12 +28,7 @@ def weather():
     data_json = data.json()
     file_path = f"{city}.json"
 
-    try:
-        with open(file_path, "w") as json_file:
-            json.dump(data_json, json_file, indent=4)
-        print("JSON data saved to", file_path)
-    except Exception as e:
-        print("Error:", str(e))
+   
 
     return data_json
 
